@@ -33,6 +33,12 @@ Partial Class Form1
         Me.txt_items = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.label5 = New System.Windows.Forms.Label()
+        Me.lbl_Price = New System.Windows.Forms.Label()
+        Me.txt_price = New System.Windows.Forms.TextBox()
+        Me.lb_Items = New System.Windows.Forms.ListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lbl_subTotal = New System.Windows.Forms.Label()
+        Me.lbl_total = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btn_addItem
@@ -46,7 +52,7 @@ Partial Class Form1
         '
         'txt_name
         '
-        Me.txt_name.Location = New System.Drawing.Point(131, 166)
+        Me.txt_name.Location = New System.Drawing.Point(136, 148)
         Me.txt_name.Name = "txt_name"
         Me.txt_name.Size = New System.Drawing.Size(100, 20)
         Me.txt_name.TabIndex = 1
@@ -54,7 +60,7 @@ Partial Class Form1
         'lbl_name
         '
         Me.lbl_name.AutoSize = True
-        Me.lbl_name.Location = New System.Drawing.Point(86, 169)
+        Me.lbl_name.Location = New System.Drawing.Point(91, 151)
         Me.lbl_name.Name = "lbl_name"
         Me.lbl_name.Size = New System.Drawing.Size(38, 13)
         Me.lbl_name.TabIndex = 2
@@ -63,7 +69,7 @@ Partial Class Form1
         'lbl_unit
         '
         Me.lbl_unit.AutoSize = True
-        Me.lbl_unit.Location = New System.Drawing.Point(95, 195)
+        Me.lbl_unit.Location = New System.Drawing.Point(100, 177)
         Me.lbl_unit.Name = "lbl_unit"
         Me.lbl_unit.Size = New System.Drawing.Size(29, 13)
         Me.lbl_unit.TabIndex = 4
@@ -71,7 +77,7 @@ Partial Class Form1
         '
         'txt_units
         '
-        Me.txt_units.Location = New System.Drawing.Point(131, 192)
+        Me.txt_units.Location = New System.Drawing.Point(136, 174)
         Me.txt_units.Name = "txt_units"
         Me.txt_units.Size = New System.Drawing.Size(100, 20)
         Me.txt_units.TabIndex = 3
@@ -79,7 +85,7 @@ Partial Class Form1
         'lbl_amount
         '
         Me.lbl_amount.AutoSize = True
-        Me.lbl_amount.Location = New System.Drawing.Point(78, 221)
+        Me.lbl_amount.Location = New System.Drawing.Point(83, 203)
         Me.lbl_amount.Name = "lbl_amount"
         Me.lbl_amount.Size = New System.Drawing.Size(46, 13)
         Me.lbl_amount.TabIndex = 6
@@ -87,7 +93,7 @@ Partial Class Form1
         '
         'txt_amount
         '
-        Me.txt_amount.Location = New System.Drawing.Point(131, 218)
+        Me.txt_amount.Location = New System.Drawing.Point(136, 200)
         Me.txt_amount.Name = "txt_amount"
         Me.txt_amount.Size = New System.Drawing.Size(100, 20)
         Me.txt_amount.TabIndex = 5
@@ -103,7 +109,7 @@ Partial Class Form1
         '
         'txt_items
         '
-        Me.txt_items.Location = New System.Drawing.Point(322, 166)
+        Me.txt_items.Location = New System.Drawing.Point(576, 37)
         Me.txt_items.Multiline = True
         Me.txt_items.Name = "txt_items"
         Me.txt_items.Size = New System.Drawing.Size(212, 209)
@@ -112,7 +118,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(388, 131)
+        Me.Label4.Location = New System.Drawing.Point(388, 113)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
         Me.Label4.TabIndex = 9
@@ -127,11 +133,68 @@ Partial Class Form1
         Me.label5.TabIndex = 10
         Me.label5.Text = "Enter Item Details"
         '
+        'lbl_Price
+        '
+        Me.lbl_Price.AutoSize = True
+        Me.lbl_Price.Location = New System.Drawing.Point(91, 229)
+        Me.lbl_Price.Name = "lbl_Price"
+        Me.lbl_Price.Size = New System.Drawing.Size(34, 13)
+        Me.lbl_Price.TabIndex = 12
+        Me.lbl_Price.Text = "Price:"
+        '
+        'txt_price
+        '
+        Me.txt_price.Location = New System.Drawing.Point(136, 226)
+        Me.txt_price.Name = "txt_price"
+        Me.txt_price.Size = New System.Drawing.Size(100, 20)
+        Me.txt_price.TabIndex = 11
+        '
+        'lb_Items
+        '
+        Me.lb_Items.FormattingEnabled = True
+        Me.lb_Items.Location = New System.Drawing.Point(325, 151)
+        Me.lb_Items.Name = "lb_Items"
+        Me.lb_Items.Size = New System.Drawing.Size(210, 147)
+        Me.lb_Items.TabIndex = 14
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(89, 314)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 23)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'lbl_subTotal
+        '
+        Me.lbl_subTotal.AutoSize = True
+        Me.lbl_subTotal.Location = New System.Drawing.Point(573, 361)
+        Me.lbl_subTotal.Name = "lbl_subTotal"
+        Me.lbl_subTotal.Size = New System.Drawing.Size(59, 13)
+        Me.lbl_subTotal.TabIndex = 16
+        Me.lbl_subTotal.Text = "Sub Total: "
+        '
+        'lbl_total
+        '
+        Me.lbl_total.AutoSize = True
+        Me.lbl_total.Location = New System.Drawing.Point(573, 391)
+        Me.lbl_total.Name = "lbl_total"
+        Me.lbl_total.Size = New System.Drawing.Size(34, 13)
+        Me.lbl_total.TabIndex = 17
+        Me.lbl_total.Text = "Total:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lbl_total)
+        Me.Controls.Add(Me.lbl_subTotal)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lb_Items)
+        Me.Controls.Add(Me.lbl_Price)
+        Me.Controls.Add(Me.txt_price)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txt_items)
@@ -161,4 +224,10 @@ Partial Class Form1
     Friend WithEvents txt_items As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents label5 As Label
+    Friend WithEvents lbl_Price As Label
+    Friend WithEvents txt_price As TextBox
+    Friend WithEvents lb_Items As ListBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents lbl_subTotal As Label
+    Friend WithEvents lbl_total As Label
 End Class

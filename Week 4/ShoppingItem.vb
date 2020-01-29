@@ -41,14 +41,24 @@
         End Set
     End Property
 
+    Private _price As Decimal
+    Public Property Price() As Decimal
+        Get
+            Return _price
+        End Get
+        Set(ByVal value As Decimal)
+            _price = value
+        End Set
+    End Property
+
     ''' <summary>
     ''' Constructor
     ''' </summary>
-    Public Sub ShoppingItem()
+    Public Sub New()
 
     End Sub
 
-    Public Sub ShoppingItem(name As String, units As String, amount As Integer)
+    Public Sub New(name As String, units As String, amount As Integer)
         Me.Name = name
         Me.Amount = amount
         Me.Units = units
