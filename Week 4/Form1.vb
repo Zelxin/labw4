@@ -1,5 +1,7 @@
 ﻿Public Class Form1
     Private _shoppingList As New ShoppingList
+    Dim fn As String = "MyShoppingList.txt"
+
     Private Sub btn_addItem_Click(sender As Object, e As EventArgs) Handles btn_addItem.Click
         Dim item As New ShoppingItem()
         item.Name = txt_name.Text
@@ -33,6 +35,14 @@
     End Sub
 
     Private Sub btn_writeList_Click(sender As Object, e As EventArgs) Handles btn_writeList.Click
+        _shoppingList.WriteListToFile(fn)
+    End Sub
 
+    Private Sub btn_read_Click(sender As Object, e As EventArgs) Handles btn_read.Click
+        Dim theShoppingListAfterRead = ShoppingList.ReadShoppingListFile(fn)
+        lb_Items.Items.Clear()
+        For Each item In theShoppingListAfterRead.Items
+            lb_Items.Items.Add(item)
+        Next
     End Sub
 End Class

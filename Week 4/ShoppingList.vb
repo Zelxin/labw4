@@ -17,9 +17,9 @@ Public Class ShoppingList
         End Set
     End Property
 
-    Public ReadOnly Property SubTotal() As Decimal
+    Public ReadOnly Property SubTotal() As Decimal?
         Get
-            Dim stotal As Decimal = 0
+            Dim stotal As Decimal? = 0
             For Each i In Items
                 stotal += i.Price * i.Amount
             Next
@@ -61,12 +61,41 @@ Public Class ShoppingList
     End Function
 
     Public Sub WriteListToFile(filename As String)
-
+        Using sw = New StreamWriter(filename)
+            For Each item In Items
+                sw.WriteLine(item.ToFileString())
+            Next
+        End Using
     End Sub
 
     Public Shared Function ReadShoppingListFile(filename As String) As ShoppingList
         'Import System.IO
+        Dim listOfItems = New List(Of ShoppingItem)
+        Dim line As String = ""
 
+        Using sr = New StreamReader(filename)
+            line = sr.ReadLine()
+            While line IsNot Nothing
+                Try
+                    '$"{Name}|{Amount}|{Units}|{Price}"               
+                    Dim data = line.Split("|"c)
+                    Dim shoppingItem = New ShoppingItem()
+                    shoppingItem.Name = data(0)
+                    shoppingItem.Amount = Integer.Parse(data(1))
+                    shoppingItem.Units = data(2)
+                    shoppingItem.Price = Decimal.Parse(data(3))
+                    listOfItems.Add(shoppingItem)
+                Catch ioEX As IOException
+                    MessageBox.Show($"{ioEX.Message}", "File Error!")
+                Catch ex As Exception
+                    MessageBox.Show($"{ex.Message}", "Generic Error!")
+                Finally
+                    line = sr.ReadLine()
+                End Try
+            End While
+        End Using
+
+        Return New ShoppingList(listOfItems)
     End Function
 
 End Class

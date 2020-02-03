@@ -38,6 +38,7 @@ Partial Class Form1
         Me.btn_writeList = New System.Windows.Forms.Button()
         Me.lbl_subTotal = New System.Windows.Forms.Label()
         Me.lbl_total = New System.Windows.Forms.Label()
+        Me.btn_read = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn_addItem
@@ -143,7 +144,7 @@ Partial Class Form1
         'lb_Items
         '
         Me.lb_Items.FormattingEnabled = True
-        Me.lb_Items.Location = New System.Drawing.Point(325, 151)
+        Me.lb_Items.Location = New System.Drawing.Point(325, 148)
         Me.lb_Items.Name = "lb_Items"
         Me.lb_Items.Size = New System.Drawing.Size(210, 147)
         Me.lb_Items.TabIndex = 14
@@ -175,11 +176,21 @@ Partial Class Form1
         Me.lbl_total.TabIndex = 17
         Me.lbl_total.Text = "Total:"
         '
+        'btn_read
+        '
+        Me.btn_read.Location = New System.Drawing.Point(193, 314)
+        Me.btn_read.Name = "btn_read"
+        Me.btn_read.Size = New System.Drawing.Size(70, 23)
+        Me.btn_read.TabIndex = 18
+        Me.btn_read.Text = "Read List"
+        Me.btn_read.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(756, 440)
+        Me.Controls.Add(Me.btn_read)
         Me.Controls.Add(Me.lbl_total)
         Me.Controls.Add(Me.lbl_subTotal)
         Me.Controls.Add(Me.btn_writeList)
@@ -219,4 +230,5 @@ Partial Class Form1
     Friend WithEvents btn_writeList As Button
     Friend WithEvents lbl_subTotal As Label
     Friend WithEvents lbl_total As Label
+    Friend WithEvents btn_read As Button
 End Class

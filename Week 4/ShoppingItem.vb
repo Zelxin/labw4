@@ -77,12 +77,16 @@
         txtBox.AppendText(Me.ToString() & Environment.NewLine)
     End Sub
 
+    Public Function ToFileString() As String
+        Return $"{Name}|{Amount}|{Units}|{Price}"
+    End Function
+
     ''' <summary>
     ''' Summary of shopping item
     ''' </summary>
     ''' <returns>Nicely formated description</returns>
     Public Overrides Function ToString() As String
-        Return $"{Amount} x {Units} of {Name}"
+        Return $"{Amount} x {Units} of {Name} @ {Price}"
     End Function
 
 End Class
