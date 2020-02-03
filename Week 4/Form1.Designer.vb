@@ -29,14 +29,13 @@ Partial Class Form1
         Me.txt_units = New System.Windows.Forms.TextBox()
         Me.lbl_amount = New System.Windows.Forms.Label()
         Me.txt_amount = New System.Windows.Forms.TextBox()
-        Me.btn_cancel = New System.Windows.Forms.Button()
-        Me.txt_items = New System.Windows.Forms.TextBox()
+        Me.btn_clear = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.label5 = New System.Windows.Forms.Label()
         Me.lbl_Price = New System.Windows.Forms.Label()
         Me.txt_price = New System.Windows.Forms.TextBox()
         Me.lb_Items = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_writeList = New System.Windows.Forms.Button()
         Me.lbl_subTotal = New System.Windows.Forms.Label()
         Me.lbl_total = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -98,22 +97,14 @@ Partial Class Form1
         Me.txt_amount.Size = New System.Drawing.Size(100, 20)
         Me.txt_amount.TabIndex = 5
         '
-        'btn_cancel
+        'btn_clear
         '
-        Me.btn_cancel.Location = New System.Drawing.Point(193, 272)
-        Me.btn_cancel.Name = "btn_cancel"
-        Me.btn_cancel.Size = New System.Drawing.Size(75, 23)
-        Me.btn_cancel.TabIndex = 7
-        Me.btn_cancel.Text = "Cancel"
-        Me.btn_cancel.UseVisualStyleBackColor = True
-        '
-        'txt_items
-        '
-        Me.txt_items.Location = New System.Drawing.Point(576, 37)
-        Me.txt_items.Multiline = True
-        Me.txt_items.Name = "txt_items"
-        Me.txt_items.Size = New System.Drawing.Size(212, 209)
-        Me.txt_items.TabIndex = 8
+        Me.btn_clear.Location = New System.Drawing.Point(193, 272)
+        Me.btn_clear.Name = "btn_clear"
+        Me.btn_clear.Size = New System.Drawing.Size(75, 23)
+        Me.btn_clear.TabIndex = 7
+        Me.btn_clear.Text = "Clear"
+        Me.btn_clear.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -157,14 +148,14 @@ Partial Class Form1
         Me.lb_Items.Size = New System.Drawing.Size(210, 147)
         Me.lb_Items.TabIndex = 14
         '
-        'Button1
+        'btn_writeList
         '
-        Me.Button1.Location = New System.Drawing.Point(89, 314)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(70, 23)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_writeList.Location = New System.Drawing.Point(89, 314)
+        Me.btn_writeList.Name = "btn_writeList"
+        Me.btn_writeList.Size = New System.Drawing.Size(70, 23)
+        Me.btn_writeList.TabIndex = 15
+        Me.btn_writeList.Text = "Write List"
+        Me.btn_writeList.UseVisualStyleBackColor = True
         '
         'lbl_subTotal
         '
@@ -191,14 +182,13 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lbl_total)
         Me.Controls.Add(Me.lbl_subTotal)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btn_writeList)
         Me.Controls.Add(Me.lb_Items)
         Me.Controls.Add(Me.lbl_Price)
         Me.Controls.Add(Me.txt_price)
         Me.Controls.Add(Me.label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txt_items)
-        Me.Controls.Add(Me.btn_cancel)
+        Me.Controls.Add(Me.btn_clear)
         Me.Controls.Add(Me.lbl_amount)
         Me.Controls.Add(Me.txt_amount)
         Me.Controls.Add(Me.lbl_unit)
@@ -220,14 +210,13 @@ Partial Class Form1
     Friend WithEvents txt_units As TextBox
     Friend WithEvents lbl_amount As Label
     Friend WithEvents txt_amount As TextBox
-    Friend WithEvents btn_cancel As Button
-    Friend WithEvents txt_items As TextBox
+    Friend WithEvents btn_clear As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents label5 As Label
     Friend WithEvents lbl_Price As Label
     Friend WithEvents txt_price As TextBox
     Friend WithEvents lb_Items As ListBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btn_writeList As Button
     Friend WithEvents lbl_subTotal As Label
     Friend WithEvents lbl_total As Label
 End Class

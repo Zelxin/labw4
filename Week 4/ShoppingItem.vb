@@ -41,12 +41,12 @@
         End Set
     End Property
 
-    Private _price As Decimal
-    Public Property Price() As Decimal
+    Private _price As Decimal?
+    Public Property Price() As Decimal?
         Get
             Return _price
         End Get
-        Set(ByVal value As Decimal)
+        Set(ByVal value As Decimal?)
             _price = value
         End Set
     End Property
@@ -59,9 +59,14 @@
     End Sub
 
     Public Sub New(name As String, units As String, amount As Integer)
+        Me.New(name, units, amount, Nothing)
+    End Sub
+
+    Public Sub New(name As String, units As String, amount As Integer, price As Decimal?)
         Me.Name = name
         Me.Amount = amount
         Me.Units = units
+        Me.Price = price
     End Sub
 
     ''' <summary>
@@ -69,7 +74,6 @@
     ''' </summary>
     ''' <param name="txtBox">Textbox for the item text to be added to.</param>
     Public Sub AddItem(txtBox As TextBox)
-        'txtBox.AppendText($"{Me.ToString()}{Environment.NewLine}")
         txtBox.AppendText(Me.ToString() & Environment.NewLine)
     End Sub
 

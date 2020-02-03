@@ -23,7 +23,6 @@
         End If
 
         _shoppingList.Items.Add(item)
-        item.AddItem(txt_items)
 
         lb_Items.Items.Add(item)
         lbl_subTotal.Text = $"Sub Total: {_shoppingList.SubTotal:C}"
@@ -31,5 +30,9 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _shoppingList = New ShoppingList()
+    End Sub
+
+    Private Sub btn_writeList_Click(sender As Object, e As EventArgs) Handles btn_writeList.Click
+
     End Sub
 End Class
